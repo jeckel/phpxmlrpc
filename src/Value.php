@@ -518,7 +518,7 @@ class Value implements \Countable, \IteratorAggregate, \ArrayAccess
      *
      * @return integer
      */
-    public function count()
+    public function count(): int
     {
         switch ($this->mytype) {
             case 3:
@@ -538,7 +538,7 @@ class Value implements \Countable, \IteratorAggregate, \ArrayAccess
      * @return \ArrayIterator
      * @internal required to be public to implement an Interface
      */
-    public function getIterator()
+    public function getIterator(): \ArrayIterator
     {
         switch ($this->mytype) {
             case 3:
@@ -558,7 +558,7 @@ class Value implements \Countable, \IteratorAggregate, \ArrayAccess
      * @param mixed $value
      * @throws \Exception
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         switch ($this->mytype) {
             case 3:
@@ -603,7 +603,7 @@ class Value implements \Countable, \IteratorAggregate, \ArrayAccess
      * @param mixed $offset
      * @return bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         switch ($this->mytype) {
             case 3:
@@ -623,7 +623,7 @@ class Value implements \Countable, \IteratorAggregate, \ArrayAccess
      * @param mixed $offset
      * @throws \Exception
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         switch ($this->mytype) {
             case 3:
@@ -646,7 +646,7 @@ class Value implements \Countable, \IteratorAggregate, \ArrayAccess
      * @return mixed|Value|null
      * @throws \Exception
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         switch ($this->mytype) {
             case 3:
